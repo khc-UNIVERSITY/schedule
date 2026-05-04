@@ -3,7 +3,7 @@ import React from 'react';
 import { useCallback, useState } from 'react';
 
 // components
-import Lesson from '../Lesson';
+import LessonController from '../LessonController/LessonController.jsx';
 // import DoubleLessonChanger from '../DoubleLessonChanger/DoubleLessonChanger.jsx';
 
 // constants
@@ -44,7 +44,7 @@ export default function ShowWeekLessons() {
           lessons[dayscheduleNum]?.map(
             (lesson, ind) => {
               return lesson?.getData(isTopLesson) ?
-                <Lesson
+                <LessonController
                   data={{ ...lesson?.getData(isTopLesson), status: "default" }}
                   key={`${lesson.title} ${ind}`}
                 /> : <React.Fragment key={ind}></React.Fragment>

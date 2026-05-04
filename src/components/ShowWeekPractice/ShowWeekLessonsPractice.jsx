@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 // components
 import Weekend from '../Weekend';
-import Practice from '../Practice'
+import PracticeController from '../PracticeController'
 
 // constants
 import practice from '../../constants/practice.js';
@@ -45,7 +45,7 @@ export default function ShowWeekPractices() {
             :
             practice[dayscheduleNum]?.map(
               (practice, ind) => practice ?
-                <Practice
+                <PracticeController
                   key={ind}
                   data={practice}
                 />
