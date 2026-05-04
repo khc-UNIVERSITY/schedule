@@ -6,12 +6,12 @@ import BeforeClass from "../BeforeClass";
 import Weekend from "../Weekend";
 import AfterClass from "../AfterClass";
 import Break from "../Break";
-import Lesson from "../Lesson";
+import LessonController from "../LessonController";
 import ShowWeekLessons from "../ShowWeekLessons";
 import NotificationCircle from "../NotificationCircle";
 import Navigation from "../Navigation";
 import EventCard from "../EventCard";
-import Practice from "../Practice";
+import PracticeController from "../PracticeController";
 import SettingsOption from '../SettingsOption'
 import PracticePage from "../../pages/PracticePage";
 
@@ -58,7 +58,7 @@ function AllVersions({ theme }) {
       <SettingsOption optionData={{name: "Some option"}}/>
 
       <PracticePage />
-      <Practice
+      <PracticeController
         data={{
           teacher: "Galoyan S",
           b: "5",
@@ -66,6 +66,42 @@ function AllVersions({ theme }) {
           r: "9",
           fullRoom: "51009",
           start: "09:30",
+          end: "11:10",
+        }}
+      />
+      
+      <PracticeController
+        data={{
+          teacher: "Galoyan S",
+          b: "5",
+          f: "10",
+          r: "9",
+          fullRoom: "51009",
+          start: "11:00",
+          end: "11:10",
+        }}
+      />
+
+      <PracticeController
+        data={{
+          teacher: "Galoyan S",
+          b: "5",
+          f: "10",
+          r: "9",
+          fullRoom: "51009",
+          start: "12:50",
+          end: "11:10",
+        }}
+      />
+
+      <PracticeController
+        data={{
+          teacher: "Galoyan S",
+          b: "5",
+          f: "10",
+          r: "9",
+          fullRoom: "51009",
+          start: "14:20",
           end: "11:10",
         }}
       />
@@ -84,34 +120,45 @@ function AllVersions({ theme }) {
           place: "Place street",
         }}
       />
-      <Lesson
+      <LessonController
         data={{
           title: "Title",
           room: 40404,
           teacher: "Galoyan S",
-          start: "06:00",
+          start: "09:30",
           end: "23:00",
           status: "current",
         }}
       />
 
-      <Lesson
+      <LessonController
         data={{
           title: "Title",
           room: 40404,
           teacher: "Galoyan S",
-          start: "09:00",
+          start: "11:00",
           end: "09:30",
           status: "default",
         }}
       />
       
-      <Lesson
+      <LessonController
         data={{
           title: "Title",
           room: 40404,
           teacher: "Galoyan S",
-          start: "09:00",
+          start: "12:50",
+          end: "09:30",
+          status: "default",
+        }}
+      />
+
+      <LessonController
+        data={{
+          title: "Title",
+          room: 40404,
+          teacher: "Galoyan S",
+          start: "14:20",
           end: "09:30",
           status: "default",
         }}
