@@ -1,7 +1,7 @@
 .colors_artemis_2 {
   /* semantic layer */
   --bg: rgb(22, 22, 22);
-  --bg-contrast: #0000008a;
+  --bg-contrast: #00000086;
 
   --text: #ffffff;
   --text-dim: #e2e2e2;
@@ -44,7 +44,7 @@
 
   /* visual background */
   --bg-image: url("../assets/img/background/moon_craters.jpg");
-  --bg-effect: blur(5px);
+  --bg-effect: blur(2px);
   --bg-image-size: none;
   --bg-image-position: center;
   --bg-image-attachment: fixed;

@@ -15,6 +15,7 @@ import theme2Img from '../assets/img/updates/theme-2.png';
 import themeImg from '../assets/img/updates/theme.png';
 import lessonCard2Img from '../assets/img/updates/lesson-card-2.png';
 import themeMoonImg from '../assets/img/updates/theme-moon.png';
+import artemis2Img from '../assets/img/updates/theme-artemis_ii.png';
 
 const lastUpdateAt = "2026-05-02T20:56:07.008Z"
 
@@ -26,6 +27,13 @@ export const listTypes = {
 const updates = {
   lastUpdateAt,
   versions: [
+    {
+      version: "1.16.0",
+      list: [
+        [listTypes.text, "Նոր թեմա՝ Artemis II"],
+        [listTypes.img, artemis2Img],
+      ],
+    },
     {
       version: "1.15.0",
       list: [
