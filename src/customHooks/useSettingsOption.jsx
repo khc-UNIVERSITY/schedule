@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export default function useSettingsOption(optionData) {
-  const { defaultValue, key } = optionData;
+  const { key, defaultValue } = optionData;
   
   if (defaultValue === null) throw new Error("Add defaultValue");
 
