@@ -27,30 +27,13 @@ import appModes from './constants/appModes';
 import './app.css'
 
 function App() {
-	const [theme, setTheme] = useTheme();
+	const [theme] = useTheme();
 	const appMode = appModes.PRACTICE;
 
 	useEffect(() => {
-		document.body.classList.add('colors_default');
-
-		if (theme) {
-			document.body.classList.add(theme);
-		}
-	}, []);
-
-	useEffect(() => {
-		if (theme === "") {
-			return;
-		}
-
 		document.body.classList = ["colors_default"];
 		document.body.classList.add(theme);
-	}, [theme]);
-
-	const newTheme = (themeName) => {
-		setTheme(themeName);
-		localStorage.setItem("theme", themeName);
-	}
+	}, []);
 
 	return (
 		<div>
@@ -63,7 +46,7 @@ function App() {
 					<Route path={routes.SCHEDULE_WEEK} element={<ScheduleWeekPage />}/>
 					<Route path={routes.EVENTS} element={<EventsPage />}/>
 					<Route path={routes.SETTINGS} element={<SettingsPage />}/>
-					<Route path={routes.THEME} element={<ThemePage newTheme={newTheme}/>}/>
+					<Route path={routes.THEME} element={<ThemePage />}/>
 					<Route path={routes.STORAGE} element={<StoragePage />}/>
 					<Route path={routes.INFO} element={<InfoPage />}/>
 				</Route>
