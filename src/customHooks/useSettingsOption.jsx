@@ -1,20 +1,24 @@
-import { useState } from "react";
+// hooks
+import useRedux from '../customHooks/useRedux';
+
+// slice actions
+import { 
+  updateOption as updateOptionAction,
+} from "../store/slices/settingsSlice.slice.js";
 
 export default function useSettingsOption(optionData) {
   const { key, defaultValue } = optionData;
-  
-  if (defaultValue === null) throw new Error("Add defaultValue");
 
-  const keyFormat = `s_${key}`;
-  const [option, setOption] = useState(JSON.parse(localStorage.getItem(keyFormat)) ?? defaultValue);
+  const [ settingsData, dispatch ] = useRedux("settingsSlice");
+  const { options } = settingsData;
+  const optionValue = options[key] ?? defaultValue;
 
   const toggleOption = () => {
-    setOption((prev) => {
-      const newValue = !prev;
-      localStorage.setItem(keyFormat, JSON.stringify(newValue));
-      return newValue;
-    });
+    dispatch(updateOptionAction({
+      key: key,
+      value: !optionValue,
+    }));
   }
 
-  return [option, toggleOption];
+  return [optionValue, toggleOption];
 }

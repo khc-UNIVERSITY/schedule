@@ -2,13 +2,13 @@ const optionsValues = {
   lessonLineDisabled: {
     name: "Անջատել դասի գրադիենտը",
     defaultValue: false,
-    key: "lessonLineDisabled",
+    key: "s_lessonLineDisabled",
   },
   
   notMergeLessonNumbers: {
     name: "Լսարանի թվերը անջատ ցույց տալ",
     defaultValue: true,
-    key: "notMergeLessonNumbers",
+    key: "s_notMergeLessonNumbers",
   },
 };
 
