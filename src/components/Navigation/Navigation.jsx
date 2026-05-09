@@ -23,8 +23,8 @@ import appModes from '../../constants/appModes';
 import classes from './styles.module.css';
 
 export default function Navigation({ mode = appModes.SCHEDULE }) {
-  const [isEventsUpdated, updateEvents] = useVersion("events", VERSIONS.EVENTS);
-  const [isSettingsUpdated, updateSettings] = useVersion("settings", VERSIONS.SETTINGS);
+  const [isEventsUpdated, updateEvents] = useVersion(VERSIONS.EVENTS.key, VERSIONS.EVENTS.version);
+  const [isSettingsUpdated, updateSettings] = useVersion(VERSIONS.SETTINGS.key, VERSIONS.SETTINGS.version);
   const { pathname } = useLocation();
   
   const isScheduleMode = mode === appModes.SCHEDULE;

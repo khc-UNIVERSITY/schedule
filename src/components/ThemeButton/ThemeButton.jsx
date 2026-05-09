@@ -11,7 +11,7 @@ import NotificationCircle from '../../components/NotificationCircle';
 import classes from './styles.module.css';
 
 export default function ThemeButton({ themeData, onClickTheme }) {
-  const [isShowNot, updateVersion] = useVersion(themeData.theme, themeData.version);
+  const [isShowNot, updateVersion] = useVersion(themeData.key, themeData.version);
 
   const onClickHandler = () => {
     onClickTheme(themeData.theme);

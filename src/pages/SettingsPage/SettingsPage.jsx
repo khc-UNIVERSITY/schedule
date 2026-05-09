@@ -20,8 +20,8 @@ import SETTINGS from "../../constants/settings";
 import classes from "./styles.module.css";
 
 export default function SettingsPage() {
-  const [isShowThemeUpdate, updateThemeVersion] = useVersion("theme", VERSIONS.THEME);
-  const [isShowInfoUpdate, updateInfoVersion] = useVersion("info", VERSIONS.INFO);
+  const [isShowThemeUpdate, updateThemeVersion] = useVersion(VERSIONS.THEME.key, VERSIONS.THEME.version);
+  const [isShowInfoUpdate, updateInfoVersion] = useVersion(VERSIONS.INFO.key, VERSIONS.INFO.version);
   
   const {
     optionsValues,
