@@ -17,6 +17,7 @@
 
 .toggle {
   rotate: 180deg;
+  opacity: .8;
 }
 
 .toggleActive {

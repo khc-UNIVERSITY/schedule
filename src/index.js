@@ -1,11 +1,11 @@
 // libs
 import ReactDOM from "react-dom/client";
 import { HashRouter } from "react-router-dom";
-import { Provider } from 'react-redux'
+import { Provider } from "react-redux";
 
 // components
 import App from "./App";
-import AllComponentsPreview from './components/AllComponentsPreview';
+import AllComponentsPreview from "./components/AllComponentsPreview";
 
 // store
 import store from "./store/store";
@@ -19,4 +19,4 @@ root.render(
   </HashRouter>
 );
 
-// root.render(<AllComponentsPreview />);
+root.render(<Provider store={store}><AllComponentsPreview /></Provider>);

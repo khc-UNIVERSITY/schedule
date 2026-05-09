@@ -26,14 +26,16 @@
   font-size: 2.5rem;
   padding: 15px;
   user-select: none;
-  color: var(--primaryColor_4);
   -webkit-user-select: none; /* Safari, Chrome */
   -moz-user-select: none;    /* Firefox */
   -ms-user-select: none;     /* IE/Edge */
   border-radius: 0;
+  opacity: .7;
+  color: var(--text);
 }
 
 .activeTab {
+  opacity: 1;
   color: var(--accent);
   filter: var(--bg-filter);
 }
