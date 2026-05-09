@@ -28,6 +28,13 @@ const updates = {
   lastUpdateAt,
   versions: [
     {
+      version: "1.16.1",
+      list: [
+        [listTypes.text, "Թարմացված ակցենտային գույններ հետևյալ թեմաների համար` Artemis II, Moon, Glass"],
+        [listTypes.text, "bug fix"],
+      ],
+    },
+    {
       version: "1.16.0",
       list: [
         [listTypes.text, "Նոր թեմա՝ Artemis II"],
