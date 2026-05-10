@@ -30,12 +30,16 @@
   -moz-user-select: none;    /* Firefox */
   -ms-user-select: none;     /* IE/Edge */
   border-radius: 0;
-  opacity: .7;
   color: var(--text);
+  svg {
+    opacity: .7;
+  }
 }
 
 .activeTab {
-  opacity: 1;
+  svg {
+    opacity: 1;
+  }
   color: var(--accent);
   filter: var(--bg-filter);
 }

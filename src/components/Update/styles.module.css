@@ -19,6 +19,7 @@
 
 .text {
   position: relative;
+  text-wrap: balance;
   padding-left: 14px;
 }
 

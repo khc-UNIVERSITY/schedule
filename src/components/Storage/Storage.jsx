@@ -28,7 +28,7 @@ export default function Storage() {
           storageKeys.length > 0 &&
           storageKeys.map(key => 
             <div key={key} className={classes.keyContainer}>
-              <p className={classes.key} >{key}</p>
+              <p className={classes.key}>{key}</p>
               <p className={classes.value}>{localStorage.getItem(key)}</p>
             </div>
           )

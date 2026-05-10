@@ -24,6 +24,10 @@
 }
 
 .keyContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
   padding: 10px;
   border-radius: 5px;
   backdrop-filter: var(--bg-effect);  
@@ -31,11 +35,20 @@
   background: var(--bg-contrast);
 }
 
+.key, .value {
+  width: 50%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .key {
   font-weight: bold;
-
+  text-align: left;
 }
+
 .value {
+  text-align: right;
   margin-top: 5px;
 }
 
