@@ -1,4 +1,5 @@
 const appModes = {
+  OFFLINE: "offline",
   SCHEDULE: "schedule",
   PRACTICE: "practice",
 };

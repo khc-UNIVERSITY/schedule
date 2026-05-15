@@ -2,6 +2,7 @@
 import Event from "../classes/Event.class.js";
 
 const allEvents = [
+  new Event("Պաշտպանություն").setIsDiploma(),
   new Event("Դատարան", "Նազարբեկյան 40", "2026-02-20 10:00"),
   new Event("Դատարան", "Նազարբեկյան 40", "2026-02-27 10:00"),
   new Event("Դատարան", "Նազարբեկյան 40", "2026-03-10 10:00"),
@@ -14,6 +15,11 @@ const featureEvents = [];
 for (let i = 0; i < allEvents.length; ++i) {
   const event = allEvents[i];
   const { date } = event;
+
+  if (!date) {
+    featureEvents.push(event);
+    continue;
+  }
 
   const eDate = new Date(date);
   const nDate = new Date();

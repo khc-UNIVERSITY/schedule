@@ -28,7 +28,7 @@ import './app.css'
 
 function App() {
 	const [theme] = useTheme();
-	const appMode = appModes.PRACTICE;
+	const appMode = appModes.OFFLINE;
 
 	useEffect(() => {
 		document.body.classList = ["colors_default"];
@@ -39,7 +39,7 @@ function App() {
 		<div>
 			<Routes>
 				<Route path={routes.HOME} element={<HomePage />}>
-					<Route index element={<Navigate to={appMode === appModes.SCHEDULE ? routes.SCHEDULE : routes.PRACTICE} />}/>
+					<Route index element={<Navigate to={routes.EVENTS} />}/>
 
 					<Route path={routes.PRACTICE} element={<PracticePage />}/>
 					<Route path={routes.SCHEDULE} element={<SchedulePage />}/>

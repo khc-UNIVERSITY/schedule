@@ -1,10 +1,11 @@
 export default class Event {
-  constructor(title, place, date) {
+  constructor(title, place = null, date = null) {
     this.title = title;
     this.place = place;
     this.date = date;
     this.isPrev = false;
     this.isExam = false;
+    this.isDiploma = false;
   }
 
   setIsPrev() {
@@ -14,6 +15,11 @@ export default class Event {
 
   setIsExam() {
     this.isExam = true;
+    return this;
+  }
+
+  setIsDiploma() {
+    this.isDiploma = true;
     return this;
   }
 }

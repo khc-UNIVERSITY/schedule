@@ -11,6 +11,7 @@
   padding: 10px;
   border-radius: 5px;
   backdrop-filter: var(--bg-effect);
+  border: 1px solid var(--border);
 }
 
 .events + .events {
@@ -18,7 +19,7 @@
 }
 
 .noEvents {
-  height: 40px;
+  height: 60px;
   border-radius: 5px;
   display: flex;
   align-items: center;

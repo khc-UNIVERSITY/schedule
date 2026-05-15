@@ -7,19 +7,14 @@
   /* backdrop-filter: var(--bg-effect); */
 }
 
-.exam {
-  width: fit-content;
-  padding: 5px 15px;
+.specialTitle {
+  width: 100%;
+  text-align: center;
+  padding: 10px 15px;
   border-radius: 5px;
-  margin-top: 5px;
-  background-color: red;
-  color: white;
-}
-
-.examPrev {
-  background-color: initial;
+  margin-bottom: 10px;
   border: 1px solid var(--border);
-  color: var(--text-dim);
+  color: var(--text);
 }
 
 .withIcon {

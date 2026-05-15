@@ -29,8 +29,9 @@ export default function Navigation({ mode = appModes.SCHEDULE }) {
   
   const isScheduleMode = mode === appModes.SCHEDULE;
   const isPracticeMode = mode === appModes.PRACTICE;
+  const isOfflineMode = mode === appModes.OFFLINE;
 
-  const panelGridColumns = isScheduleMode ? 4 : isPracticeMode && 3;
+  const panelGridColumns = isScheduleMode ? 4 : isPracticeMode ? 3 : isOfflineMode && 2;
 
   const panelStyles = {
     gridTemplateColumns: `repeat(${panelGridColumns}, 1fr)`
@@ -67,7 +68,6 @@ export default function Navigation({ mode = appModes.SCHEDULE }) {
 
         <Link to={routes.EVENTS} onClick={updateEvents} className={`${classes.button} ${isEventsRouter && classes.activeTab}`}>
           {isEventsRouter ? <FaStar size={41}/> : <FiStar />}
-          
           {isEventsUpdated && <NotificationCircle />}
         </Link>
         
