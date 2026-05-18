@@ -2,11 +2,12 @@
 import Event from "../classes/Event.class.js";
 
 const allEvents = [
-  new Event("Պաշտպանություն").setIsDiploma(),
   new Event("Դատարան", "Նազարբեկյան 40", "2026-02-20 10:00"),
   new Event("Դատարան", "Նազարբեկյան 40", "2026-02-27 10:00"),
   new Event("Դատարան", "Նազարբեկյան 40", "2026-03-10 10:00"),
   new Event("Դինամիկ վեբ կայքերի նախագծում", "51009", "2026-04-01 09:30").setIsExam(),
+  new Event("Տոկոսավորում", "?", "2026-05-22 12:50"),
+  new Event("Պաշտպանություն", "?", "2026-06-08 10:00").setIsDiploma(),
 ];
 
 const prevEvents = [];
