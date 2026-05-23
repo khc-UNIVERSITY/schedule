@@ -17,7 +17,7 @@ import lessonCard2Img from '../assets/img/updates/lesson-card-2.png';
 import themeMoonImg from '../assets/img/updates/theme-moon.png';
 import artemis2Img from '../assets/img/updates/theme-artemis_ii.png';
 
-const lastUpdateAt = "2026-05-18T09:57:18.942Z"
+const lastUpdateAt = "2026-05-23T08:53:51.559Z"
 
 export const listTypes = {
   text: "text",
