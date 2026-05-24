@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/schedule/static/css/main.0625d3f0.css",
-    "main.js": "/schedule/static/js/main.90d8fce0.js",
+    "main.css": "/schedule/static/css/main.71b9bdd4.css",
+    "main.js": "/schedule/static/js/main.c37a7e56.js",
     "static/media/spheres_aqua.png": "/schedule/static/media/spheres_aqua.b83da56740c85542abfe.png",
     "static/media/moon.jpg": "/schedule/static/media/moon.f2a9e9d4bf38ccd49f02.jpg",
     "static/media/moon_craters.jpg": "/schedule/static/media/moon_craters.8ec54b2985918dd8b32a.jpg",
@@ -23,11 +23,11 @@
     "static/media/week-component.png": "/schedule/static/media/week-component.00f1cf23b7eb0b1c35a0.png",
     "static/media/theme.png": "/schedule/static/media/theme.c0db2c5d41796aa8add9.png",
     "index.html": "/schedule/index.html",
-    "main.0625d3f0.css.map": "/schedule/static/css/main.0625d3f0.css.map",
-    "main.90d8fce0.js.map": "/schedule/static/js/main.90d8fce0.js.map"
+    "main.71b9bdd4.css.map": "/schedule/static/css/main.71b9bdd4.css.map",
+    "main.c37a7e56.js.map": "/schedule/static/js/main.c37a7e56.js.map"
   },
   "entrypoints": [
-    "static/css/main.0625d3f0.css",
-    "static/js/main.90d8fce0.js"
+    "static/css/main.71b9bdd4.css",
+    "static/js/main.c37a7e56.js"
   ]
 }
