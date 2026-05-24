@@ -7,6 +7,7 @@ import { BsInfoCircle } from "react-icons/bs";
 // components
 import SettingsOption from "../../components/SettingsOption";
 import NotificationCircle from "../../components/NotificationCircle";
+import ModeChanger from '../../components/ModeChanger';
 
 // hooks
 import useVersion from "../../customHooks/useVersion";
@@ -23,13 +24,12 @@ export default function SettingsPage() {
   const [isShowThemeUpdate, updateThemeVersion] = useVersion(VERSIONS.THEME.key, VERSIONS.THEME.version);
   const [isShowInfoUpdate, updateInfoVersion] = useVersion(VERSIONS.INFO.key, VERSIONS.INFO.version);
   
-  const {
-    optionsValues,
-    optionsKeys
-  } = SETTINGS;
+  const { optionsValues, optionsKeys } = SETTINGS;
 
   return (
     <div className={classes.root}>
+      <ModeChanger />
+
       {
         optionsKeys.map(optionKey =>
           <SettingsOption

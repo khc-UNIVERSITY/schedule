@@ -21,14 +21,12 @@ import useTheme from './customHooks/useTheme';
 
 // constants
 import routes from './constants/routes';
-import appModes from './constants/appModes';
 
 // general styles
 import './app.css'
 
 function App() {
 	const [theme] = useTheme();
-	const appMode = appModes.OFFLINE;
 
 	useEffect(() => {
 		document.body.classList = ["colors_default"];
@@ -52,7 +50,7 @@ function App() {
 				</Route>
 			</Routes>
 
-			<Navigation mode={appMode} />
+			<Navigation />
 		</div>
 	);
 }

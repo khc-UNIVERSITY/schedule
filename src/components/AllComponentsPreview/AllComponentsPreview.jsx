@@ -14,6 +14,7 @@ import EventCard from "../EventCard";
 import PracticeController from "../PracticeController";
 import SettingsOption from '../SettingsOption'
 import PracticePage from "../../pages/PracticePage";
+import ModeChanger from '../../components/ModeChanger';
 
 import themesData from "../../constants/themes";
 
@@ -54,7 +55,8 @@ function AllVersions({ theme }) {
       <AfterClass />
       <Break filteredLessons={[{ status: "default", start: "20:00" }]} />
       <div style={{ marginTop: "15px", width: "100%" }}></div>
-
+      
+      <ModeChanger />
       <SettingsOption optionData={{name: "Some option"}}/>
 
       <PracticePage />

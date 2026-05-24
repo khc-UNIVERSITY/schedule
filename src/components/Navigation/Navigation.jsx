@@ -8,11 +8,12 @@ import { FiStar } from "react-icons/fi";
 import { FaStar } from "react-icons/fa6";
 import { IoSettingsOutline, IoSettingsSharp } from "react-icons/io5";
 
-// custom hooks
-import useVersion from '../../customHooks/useVersion';
-
 // components
 import NotificationCircle from '../NotificationCircle';
+
+// custom hooks
+import useVersion from '../../customHooks/useVersion';
+import useMode from "../../customHooks/useMode";
 
 // constants
 import routes from "../../constants/routes";
@@ -22,9 +23,10 @@ import appModes from '../../constants/appModes';
 // styles
 import classes from './styles.module.css';
 
-export default function Navigation({ mode = appModes.SCHEDULE }) {
+export default function Navigation() {
   const [isEventsUpdated, updateEvents] = useVersion(VERSIONS.EVENTS.key, VERSIONS.EVENTS.version);
   const [isSettingsUpdated, updateSettings] = useVersion(VERSIONS.SETTINGS.key, VERSIONS.SETTINGS.version);
+  const { mode } = useMode();
   const { pathname } = useLocation();
   
   const isScheduleMode = mode === appModes.SCHEDULE;

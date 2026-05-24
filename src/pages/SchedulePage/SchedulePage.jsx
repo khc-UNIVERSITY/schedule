@@ -7,6 +7,10 @@ import Weekend from "../../components/Weekend";
 import BeforeClass from "../../components/BeforeClass";
 import AfterClass from "../../components/AfterClass";
 import Break from "../../components/Break";
+import EmptyMessage from '../../components/EmptyMessage';
+
+// hooks
+import useMode from "../../customHooks/useMode.jsx";
 
 // utils
 import filterLessons from "../../utils/filterLessons";
@@ -33,6 +37,7 @@ const scenarioStatuses = {
 export default function SchedulePage() {
   const [appStatus, setAppStatus] = useState(scenarioStatuses.lesson);
   const [filteredLessons, setFilteredLessons] = useState([]);
+  const { mode, defaultMode } = useMode();
   const isTopLesson = isAcademicTopLessonDay();
 
   const calculateDayschedule = (inputRes) => {
@@ -115,6 +120,10 @@ export default function SchedulePage() {
       clearTimeout(timeoutId);
     };
   }, [filteredLessons]);
+
+  if (mode !== defaultMode) {
+    return <EmptyMessage text={"Չկա դասացուցակ"} />
+  }
 
   const isWeekend = appStatus === scenarioStatuses.weekend;
   const isBeforeClass = appStatus === scenarioStatuses.beforeClass;

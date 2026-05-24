@@ -16,6 +16,7 @@ import themeImg from '../assets/img/updates/theme.png';
 import lessonCard2Img from '../assets/img/updates/lesson-card-2.png';
 import themeMoonImg from '../assets/img/updates/theme-moon.png';
 import artemis2Img from '../assets/img/updates/theme-artemis_ii.png';
+import modeImg from '../assets/img/updates/mode.png';
 
 const lastUpdateAt = "2026-05-23T08:53:51.559Z"
 
@@ -27,6 +28,13 @@ export const listTypes = {
 const updates = {
   lastUpdateAt,
   versions: [
+    {
+      version: "1.17.0",
+      list: [
+        [listTypes.text, "Ծրագրի ռեժիմը փոխելու button-ներ կարգավորումների էջում"],
+        [listTypes.img, modeImg],
+      ],
+    },
     {
       version: "1.16.2",
       list: [
