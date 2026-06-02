@@ -17,6 +17,7 @@ import lessonCard2Img from '../assets/img/updates/lesson-card-2.png';
 import themeMoonImg from '../assets/img/updates/theme-moon.png';
 import artemis2Img from '../assets/img/updates/theme-artemis_ii.png';
 import modeImg from '../assets/img/updates/mode.png';
+import eventsImg from '../assets/img/updates/events.png';
 
 const lastUpdateAt = "2026-05-27T16:11:43.751Z"
 
@@ -28,6 +29,13 @@ export const listTypes = {
 const updates = {
   lastUpdateAt,
   versions: [
+    {
+      version: "1.18.0",
+      list: [
+        [listTypes.text, "Նոր UI/UX միջոցառումների էջում"],
+        [listTypes.img, eventsImg],
+      ],
+    },
     {
       version: "1.17.0",
       list: [
