@@ -1,5 +1,9 @@
+// libs
+import { useState } from "react";
+
 // components
 import EventCard from "../../components/EventCard";
+import DoubleEventChanger from '../../components/DoubleEventChanger';
 
 // constants
 import events from "../../constants/events";
@@ -8,28 +12,24 @@ import events from "../../constants/events";
 import classes from "./styles.module.css";
 
 export default function EventsPage() {
+  const [isWaitingEvent, setIsVaitingEvent] = useState(true);
+
+  const eventsList = isWaitingEvent ? events.featureEvents : events.prevEvents;
+
   return (
     <div className={classes.root}>
-      <EventsList headerText="Ակնկալվող " evetsList={events.featureEvents} />
-      <EventsList headerText="Ավարտված " evetsList={events.prevEvents} />
+      <DoubleEventChanger isWaitingEvent={isWaitingEvent} setIsWaitingEvent={setIsVaitingEvent}/>
+        <div className={classes.events}>
+        {eventsList.length === 0 ? (
+          <div className={classes.noEvents}>
+            Միջոցառումներ չկան
+          </div>
+        ) : (
+          eventsList.map((eventData, ind) => (
+            <EventCard data={eventData} key={ind} />
+          ))
+        )}
     </div>
-  );
-}
-
-function EventsList({ headerText, evetsList }) {
-  return (
-    <div className={classes.events}>
-      {headerText && <h3 className={classes.sectionHeaderText}>{headerText}</h3>}
-
-      {evetsList.length === 0 ? (
-        <div className={classes.noEvents}>
-          Միջոցառումներ չկան
-        </div>
-      ) : (
-        evetsList.map((eventData, ind) => (
-          <EventCard data={eventData} key={ind} />
-        ))
-      )}
     </div>
   );
 }
