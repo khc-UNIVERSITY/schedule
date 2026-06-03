@@ -32,7 +32,8 @@ const updates = {
     {
       version: "1.18.0",
       list: [
-        [listTypes.text, "Նոր UI/UX միջոցառումների էջում"],
+        [listTypes.text, "Միջոցառումների էջում ցույց է տալիս թե ինչքան ժամանակ մնաց սկսելուն"],
+        [listTypes.text, "Նոր UI/UX՝ միջոցառումների էջում"],
         [listTypes.img, eventsImg],
       ],
     },

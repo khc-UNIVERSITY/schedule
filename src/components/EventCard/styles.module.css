@@ -17,6 +17,10 @@
   color: var(--text);
 }
 
+.timer {
+  margin-bottom: 10px;
+}
+
 .withIcon {
   display: flex;
   align-items: center;

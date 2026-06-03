@@ -1,6 +1,7 @@
 export default class Event {
-  constructor(title, place = null, date = null) {
+  constructor(title, place = null, date = null, duration = 1) {
     this.title = title;
+    this.duration = duration;
     this.place = place;
     this.date = date;
     this.isPrev = false;
