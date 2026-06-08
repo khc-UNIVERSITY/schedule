@@ -10,4 +10,6 @@ const routes = {
   INFO: "/info",
 };
 
+export const defaultRoute = routes.EVENTS;
+
 export default routes;

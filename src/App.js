@@ -21,6 +21,7 @@ import useTheme from './customHooks/useTheme';
 
 // constants
 import routes from './constants/routes';
+import { defaultRoute } from './constants/routes';
 
 // general styles
 import './app.css'
@@ -37,7 +38,7 @@ function App() {
 		<div>
 			<Routes>
 				<Route path={routes.HOME} element={<HomePage />}>
-					<Route index element={<Navigate to={routes.EVENTS} />}/>
+					<Route index element={<Navigate to={defaultRoute} />}/>
 
 					<Route path={routes.PRACTICE} element={<PracticePage />}/>
 					<Route path={routes.SCHEDULE} element={<SchedulePage />}/>
