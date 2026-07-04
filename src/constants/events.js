@@ -2,7 +2,7 @@
 import Event from "../classes/Event.class.js";
 
 const allEvents = [
-  new Event("Դիպլոմի միջոցառում", "ՀԱՊՀ", "2026-07-06 18:00", 4),
+  new Event("Դիպլոմի միջոցառում", "17 մասնաշենք", "2026-07-06 19:00", 4),
 ];
 
 allEvents.sort((a, b) => (new Date(a.date).getTime() - new Date(b.date).getTime()));
