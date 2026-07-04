@@ -19,7 +19,7 @@ import artemis2Img from '../assets/img/updates/theme-artemis_ii.png';
 import modeImg from '../assets/img/updates/mode.png';
 import eventsImg from '../assets/img/updates/events.png';
 
-const lastUpdateAt = "2026-07-04T05:15:17.118Z"
+const lastUpdateAt = "2026-07-04T05:19:06.057Z"
 
 export const listTypes = {
   text: "text",
